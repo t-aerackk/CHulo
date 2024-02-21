@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<h1> We are generating random Quotes for chulo solution</h1>
+<div class="container" id="container">
+    <div class="dark-mode-switch">
+        <label for="darkModeToggle">Dark Mode:</label>
+        <input onchange="toggleDarkMode()" type="checkbox" id="darkModeToggle">
+    </div>
+
+    <div class="font-size-switch">
+        <label for="fontSize">Font Size:</label>
+        <button onclick="changeFontSize(-2)">-</button>
+        <span id="fontSize">18</span>
+        <button onclick="changeFontSize(2)">+</button>
+    </div>
+
+    <select onchange="onCategorySelect(event)">
+        <option value="science">Science</option>
+        <option value="inspiration">Inspiration</option>
+    </select>
+
+    <div class="quote" id="quoteDisplay"></div>
+
+    <div>
+        <button onclick="getPrevQuote()">Previous</button>
+        <button onclick="getRandomQuote()">Random</button>
+        <button onclick="getNextQuote()">Next</button>
+    </div>
+</div>
+
+<script src="./script.js">
+</script>
+</body>
+</html>
